@@ -1,0 +1,492 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.5690345613363564 0.5704589947888847 0.5922636264951577 2.069980754072987
+  position -0.09220776417127902 -0.1516695356629662 3.0411860457999964
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1 1
+}
+DEF EPUCK E-puck {
+  translation -0.38 -0.38 0
+  rotation 0 0 1 1.5708
+  controller "maze_solver"
+}
+DEF WALL_1 Solid {
+  translation 0.5 0 0.05
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0.255
+        roughness 0.5
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 1 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_2 Solid {
+  translation -0.5 0 0.05
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_3 Solid {
+  translation 0 -0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_SHAPE
+}
+DEF WALL_4 Solid {
+  translation 0 0.5 0.05
+  rotation 0 0 1 1.5708
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(4)"
+  boundingObject USE WALL_SHAPE
+}
+DEF MAZE_W0 Solid {
+  translation 0.31 -0.3 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.02 0.1
+      }
+    }
+  ]
+  name "maze_w0"
+  boundingObject Box {
+    size 0.2 0.02 0.1
+  }
+}
+DEF MAZE_W1 Solid {
+  translation -0.25 -0.2 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.1
+      }
+    }
+  ]
+  name "maze_w1"
+  boundingObject Box {
+    size 0.1 0.02 0.1
+  }
+}
+DEF MAZE_W5 Solid {
+  translation -0.09 0 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.02 0.1
+      }
+    }
+  ]
+  name "maze_w5"
+  boundingObject Box {
+    size 0.2 0.02 0.1
+  }
+}
+DEF MAZE_W7 Solid {
+  translation -0.05 0.1 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.5 0.02 0.1
+      }
+    }
+  ]
+  name "maze_w7"
+  boundingObject Box {
+    size 0.5 0.02 0.1
+  }
+}
+DEF MAZE_W8 Solid {
+  translation -0.14 0.2 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.1 0.02 0.1
+      }
+    }
+  ]
+  name "maze_w8"
+  boundingObject Box {
+    size 0.1 0.02 0.1
+  }
+}
+DEF MAZE_W10 Solid {
+  translation -0.15 0.3 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.02 0.1
+      }
+    }
+  ]
+  name "maze_w10"
+  boundingObject Box {
+    size 0.3 0.02 0.1
+  }
+}
+DEF MAZE_W11 Solid {
+  translation 0.25 0.3 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.02 0.1
+      }
+    }
+  ]
+  name "maze_w11"
+  boundingObject Box {
+    size 0.3 0.02 0.1
+  }
+}
+DEF MAZE_W12 Solid {
+  translation -0.29 -0.1 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.4 0.1
+      }
+    }
+  ]
+  name "maze_w12"
+  boundingObject Box {
+    size 0.02 0.4 0.1
+  }
+}
+DEF MAZE_W15 Solid {
+  translation -0.18 -0.05 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.1
+      }
+    }
+  ]
+  name "maze_w15"
+  boundingObject Box {
+    size 0.02 0.1 0.1
+  }
+}
+DEF MAZE_W16 Solid {
+  translation -0.18 0.15 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.1
+      }
+    }
+  ]
+  name "maze_w16"
+  boundingObject Box {
+    size 0.02 0.1 0.1
+  }
+}
+DEF MAZE_W17 Solid {
+  translation -0.1 -0.25 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.1
+      }
+    }
+  ]
+  name "maze_w17"
+  boundingObject Box {
+    size 0.02 0.1 0.1
+  }
+}
+DEF MAZE_W18 Solid {
+  translation -0.1 0.25 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.1
+      }
+    }
+  ]
+  name "maze_w18"
+  boundingObject Box {
+    size 0.02 0.1 0.1
+  }
+}
+DEF MAZE_W19 Solid {
+  translation 0 -0.2 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.4 0.1
+      }
+    }
+  ]
+  name "maze_w19"
+  boundingObject Box {
+    size 0.02 0.4 0.1
+  }
+}
+DEF MAZE_W20 Solid {
+  translation 0 0.25 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.3 0.1
+      }
+    }
+  ]
+  name "maze_w20"
+  boundingObject Box {
+    size 0.02 0.3 0.1
+  }
+}
+DEF MAZE_W21 Solid {
+  translation 0.22 -0.35 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.1 0.1
+      }
+    }
+  ]
+  name "maze_w21"
+  boundingObject Box {
+    size 0.02 0.1 0.1
+  }
+}
+DEF MAZE_W25 Solid {
+  translation 0.19 0 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.02 0.2 0.1
+      }
+    }
+  ]
+  name "maze_w25"
+  boundingObject Box {
+    size 0.02 0.2 0.1
+  }
+}
+DEF MAZE_W27 Solid {
+  translation -0.445 -0.445 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.09 0.09 0.1
+      }
+    }
+  ]
+  name "maze_w27"
+  boundingObject Box {
+    size 0.09 0.09 0.1
+  }
+}
+DEF MAZE_W28 Solid {
+  translation 0.095 -0.445 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.79 0.09 0.1
+      }
+    }
+  ]
+  name "maze_w28"
+  boundingObject Box {
+    size 0.79 0.09 0.1
+  }
+}
+DEF MAZE_W29 Solid {
+  translation -0.095 0.445 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.79 0.09 0.1
+      }
+    }
+  ]
+  name "maze_w29"
+  boundingObject Box {
+    size 0.79 0.09 0.1
+  }
+}
+DEF MAZE_W30 Solid {
+  translation 0.445 0.445 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.09 0.09 0.1
+      }
+    }
+  ]
+  name "maze_w30"
+  boundingObject Box {
+    size 0.09 0.09 0.1
+  }
+}
+DEF MAZE_W31 Solid {
+  translation -0.445 0 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.09 0.98 0.1
+      }
+    }
+  ]
+  name "maze_w31"
+  boundingObject Box {
+    size 0.09 0.98 0.1
+  }
+}
+DEF MAZE_W32 Solid {
+  translation 0.445 0 0.05
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.55 0.27 0.07
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.09 0.98 0.1
+      }
+    }
+  ]
+  name "maze_w32"
+  boundingObject Box {
+    size 0.09 0.98 0.1
+  }
+}
+Robot {
+  name "supervisor"
+  controller "goal_checker"
+  supervisor TRUE
+}
